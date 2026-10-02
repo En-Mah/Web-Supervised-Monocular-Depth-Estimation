@@ -187,7 +187,7 @@ The notebook includes several complementary analyses. Together they inspect the 
 
 ## 1. RGB and Relative-Depth Samples
 
-![RGB and relative-depth samples](visualize_samples.png)
+![RGB and relative-depth samples](Plots/visualize_samples.png)
 
 This visualization shows randomly selected RGB images alongside their corresponding relative-depth maps after preprocessing.
 
@@ -204,7 +204,7 @@ The relative-depth maps are smooth over many surfaces while still preserving lar
 
 ## 2. RGB Resolution Distribution
 
-![RGB width and height distributions](RGB_Distribution.png)
+![RGB width and height distributions](Plots/RGB_Distribution.png)
 
 The notebook inspects up to the first 500 samples and records their native width and height before the fixed `384 × 384` model resize.
 
@@ -234,7 +234,7 @@ Direct resizing to a square can distort the original aspect ratio. The current i
 
 ## 3. Global Depth-Value Distribution
 
-![Depth value distribution](Depth_Value_Distribution.png)
+![Depth value distribution](Plots/Depth_Value_Distribution.png)
 
 The notebook samples up to 200 depth maps, removes zero-valued pixels for this particular analysis, concatenates the remaining pixels, and plots the global distribution.
 
@@ -266,7 +266,7 @@ For training, the notebook divides depth maps by `255`, mapping the encoded dept
 
 ## 4. Per-Image Depth Histograms
 
-![Per-image relative-depth histograms](Per-image_depth_histograms.png)
+![Per-image relative-depth histograms](Plots/Per-image_depth_histograms.png)
 
 A global histogram can hide the structure of individual scenes, so the notebook also plots several RGB images next to their own non-zero depth distributions.
 
@@ -287,7 +287,7 @@ A single global normalization scheme is applied across scenes whose depth distri
 
 ## 5. RGB–Depth Overlays
 
-![RGB/depth overlay examples](overlay_depth_grid.png)
+![RGB/depth overlay examples](Plots/overlay_depth_grid.png)
 
 For these visualizations, each depth map is resized to the RGB image resolution when necessary, normalized by its per-image maximum, rendered with the `inferno` colormap, and alpha-blended over the RGB image.
 
@@ -309,7 +309,7 @@ The overlays show that major object and scene regions generally align with depth
 
 ## 6. Vertical Depth Profile
 
-![Vertical relative-depth profile](Vertical_depth_profile_example.png)
+![Vertical relative-depth profile](Plots/Vertical_depth_profile_example.png)
 
 To summarize how depth changes from the top of an image to the bottom, the notebook divides a depth map into horizontal strips and computes the mean non-zero depth value in each strip.
 
@@ -341,7 +341,7 @@ This is an exploratory diagnostic, not a training target: the model is not expli
 
 ## 7. RGB Edges vs. Depth Discontinuities
 
-![RGB edges compared with depth gradients](Depth_edge_vs_RGB_edge_example.png)
+![RGB edges compared with depth gradients](Plots/Depth_edge_vs_RGB_edge_example.png)
 
 This analysis compares three views of the same scene:
 
